@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>SE Calculator</title>
+</head>
+
+
+
+
+<body>
+    <div class="input_div">
+        <div class="main_info">
+            Planet:<select id="se_planet">
+                <option value="9.82">Earth</option>
+                <option value="2.46">Moon</option>
+                <option value="8.838">Mars</option>
+                <option value="2.46">Europa</option>
+                <option value="10.78">Alien</option>
+                <option value="2.46">Titan</option>
+                <option value="1">Space</option>
+            </select>
+            Ship Mass (t): <input type="number" id="ship_mass">
+
+            Cargo Mass (t): <input type="number" id="cargo_mass">
+
+            Gird Type: <select id="se_gird">
+                <option value="small">Small</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+        <div class="thrusters_count">
+            Hydrogen Large: <input type="number" value="0" id="hyd_l">
+            Hydrogen Small: <input type="number" value="0" id="hyd_s">
+
+            Atmosferic Large: <input type="number" id="atm_l">
+            Atmosferic Small: <input type="number" id="atm_s">
+
+            Ion Large: <input type="number" id="ion_l">
+            Ion Small: <input type="number" id="ion_s">
+
+        </div>
+        <button id="calculate">Calculate</button>
+    </div>
+
+    <br><br>
+    --------------------------------------
+    <br><br>
+
+    <div class="output_div">
+        Total Thrust:<Span id="t_thrust"></Span>
+        Kg of Thrust:<Span id="kg_thrust"></Span>
+
+        Mass Balance:<Span id="m_balance"></Span>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
