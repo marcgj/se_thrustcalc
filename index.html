@@ -13,51 +13,93 @@
 
 
 <body>
-    <div class="input_div">
-        <div class="main_info">
-            Planet:<select id="se_planet">
-                <option value="9.82">Earth</option>
-                <option value="2.46">Moon</option>
-                <option value="8.838">Mars</option>
-                <option value="2.46">Europa</option>
-                <option value="10.78">Alien</option>
-                <option value="2.46">Titan</option>
-                <option value="1">Space</option>
-            </select>
-            Ship Mass (t): <input type="number" id="ship_mass">
+    <fieldset>
+        <legend>Ship/Planet Parameters</legend>
+        <div class="input_div">
 
-            Cargo Mass (t): <input type="number" id="cargo_mass">
+            <div class="main_info">
+                <tr>
+                    <td><label for="">Planet: </label></td>
+                    <td><select id="se_planet">
+                            <option value="9.82">Earth</option>
+                            <option value="2.46">Moon</option>
+                            <option value="8.838">Mars</option>
+                            <option value="2.46">Europa</option>
+                            <option value="10.78">Alien</option>
+                            <option value="2.46">Titan</option>
+                            <option value="1">Space</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label for="">Ship Mass: </label> </td>
+                    <td><input type="number" value="0" id="ship_mass"></td>
+                </tr>
 
-            Gird Type: <select id="se_gird">
-                <option value="small">Small</option>
-                <option value="large">Large</option>
-            </select>
-        </div>
+                <tr></tr>
+                <label for="">Cargo Mass: </label>
+                <input type="number" value="0" id="cargo_mass">
+
+                <tr><label for="">Gird Size: </label> <select id="se_gird">
+                        <option value="small">Small</option>
+                        <option value="large">Large</option>
+                    </select>
+                </tr>
+            </div>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Thrusters Amount</legend>
         <div class="thrusters_count">
-            Hydrogen Large: <input type="number" value="0" id="hyd_l">
-            Hydrogen Small: <input type="number" value="0" id="hyd_s">
-
-            Atmosferic Large: <input type="number" id="atm_l">
-            Atmosferic Small: <input type="number" id="atm_s">
-
-            Ion Large: <input type="number" id="ion_l">
-            Ion Small: <input type="number" id="ion_s">
-
+            <table>
+                <tr>
+                    <td class="lbl"><label> Hydrogen Large:</label></td>
+                    <td><input type="number" value="0" id="hyd_l"></td>
+                </tr>
+                <tr>
+                    <td class="lbl"><label> Hydrogen Small:</label></td>
+                    <td><input type="number" value="0" id="hyd_s"></td>
+                </tr>
+                <tr>
+                    <td class="lbl"><label> Atmosferic Large:</label></td>
+                    <td><input type="number" value="0" id="atm_l"></td>
+                </tr>
+                <tr>
+                    <td class="lbl"><label> Atmosferic Small:</label></td>
+                    <td><input type="number" value="0" id="atm_s"></td>
+                </tr>
+                <tr>
+                    <td class="lbl"> <label> Ion Large:</label></td>
+                    <td> <input type="number" value="0" id="ion_l"></td>
+                </tr>
+                <tr>
+                    <td class="lbl"><label> Ion Small:</label></td>
+                    <td> <input type="number" value="0" id="ion_s"></td>
+                </tr>
+            </table>
+            <button id="calculate">Calculate</button>
         </div>
-        <button id="calculate">Calculate</button>
-    </div>
+        </div>
+    </fieldset>
 
-    <br><br>
-    --------------------------------------
-    <br><br>
-
+<fieldset>
+    <legend>Answers</legend>
     <div class="output_div">
-        Total Thrust:<Span id="t_thrust"></Span>
-        Kg of Thrust:<Span id="kg_thrust"></Span>
+        
+        <table>
+        <tr>
+            <td class="lbl"> Total Thrust: </td>
+            <td><Span id="t_thrust">0</Span></td>
 
-        Mass Balance:<Span id="m_balance"></Span>
+            <td class="lbl">Kg of Thrust:</td>
+            <td><Span id="kg_thrust">0</Span></td>
+
+            <td class="lbl">Mass Balance:</td>
+            <td><Span id="m_balance">0</Span></td>
+        </tr>
+        </table>
     </div>
-
+</fieldset>
 
     <script src="main.js"></script>
 </body>

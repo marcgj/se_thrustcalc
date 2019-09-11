@@ -1,0 +1,19 @@
+body{
+    background-color: slategray;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-info,.thrusters_count,.output_div{
+    display: inline-block;
+}
+.lbl{
+    text-align: right;
+    width: 100px;
+    white-space: nowrap;
+}
+.thruster_count>input{
+    width: 100%;
+}
+#calculate{
+    width: 100%;
+}
