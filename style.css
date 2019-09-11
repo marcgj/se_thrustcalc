@@ -17,3 +17,6 @@ body{
 #calculate{
     width: 100%;
 }
+.output-label{
+    font-weight: bold;
+}
