@@ -1,5 +1,5 @@
 document.getElementById("calculate").addEventListener("click", mainCalc)
-
+document.getElementById("m_balance").style.color = "yellow"
 
 var girdsize;
 var gravity;
@@ -51,11 +51,19 @@ else if (girdsize == "large"){
  var k_thrust = totalThrust / gravity;
  var m_balance = k_thrust - shipMass;
 
- 
+ if(m_balance>0){
+    document.getElementById("m_balance").style.color = "green";
+ }
+ else if (m_balance<0){
+    document.getElementById("m_balance").style.color = "red";
+ }
+ else{
+    document.getElementById("m_balance").style.color = "yellow";
+ }
  
 
-document.getElementById("t_thrust").innerHTML = totalThrust;
-document.getElementById("kg_thrust").innerHTML = k_thrust;
-document.getElementById("m_balance").innerHTML = m_balance;
+document.getElementById("t_thrust").innerHTML = totalThrust.toFixed(2);
+document.getElementById("kg_thrust").innerHTML = k_thrust.toFixed(2);
+document.getElementById("m_balance").innerHTML = m_balance.toFixed(2);
 
 }

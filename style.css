@@ -11,7 +11,7 @@ body{
     width: 100px;
     white-space: nowrap;
 }
-.thruster_count>input{
+.thruster_count>input,.output_div>span{
     width: 100%;
 }
 #calculate{
@@ -19,4 +19,5 @@ body{
 }
 .output-label{
     font-weight: bold;
+
 }
