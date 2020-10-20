@@ -3,4 +3,6 @@ Simple thrust calculator for the game [Space Engineers](https://store.steampower
 
 You just input the gird size, the ship weight(optional), and the number of thrusters you have/need. Then the total lift weight is displayed and also the balance between the ship's weight and the mass of thrust.
 
+[Link to the webpage](https://takotero.github.io/se_thrustcalc/)
+
 **Disclaimer:** This web was built for learning pruporses so don't expect clean or optimized code. 
